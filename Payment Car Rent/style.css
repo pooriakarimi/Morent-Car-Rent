@@ -1,0 +1,4147 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "JakartaSans";
+  /* background-color: var(--backgroundColor); */
+}
+@font-face {
+  font-family: "JakartaSans";
+  src: url(/Assets/Fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+:root {
+  --primaryColor: #ffffff;
+  --secondaryColor: #3563e9;
+  --iconsColor: #596780;
+  --iconsSecondaryColor: #c3d4e966;
+  --textColor: #1a202c;
+  --textSecondaryColor: #90a3bf;
+  --backgroundColor: #f6f7f9;
+  --darkBlue: #0d3559;
+  --borderRadius: 10px;
+  --inputBcgColor: #f6f7f9;
+}
+@media screen and (max-width: 375px) {
+  .container {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonBox {
+    display: none;
+  }
+  .header {
+    width: 100%;
+    max-width: 374.99;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+  }
+  .site--title {
+    color: var(--secondaryColor);
+    font-size: 2.4rem;
+    padding: 0 0 0 30px;
+  }
+  .header__profile {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+  }
+  .mainTopic {
+    width: 100%;
+    max-width: 374.99px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .rentalSummary {
+    width: 100%;
+    max-width: 327px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    margin: 15px 0;
+    border-radius: 10px;
+  }
+  .mainTopic--title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .mainTopic--description {
+    width: 295px;
+    color: var(--textSecondaryColor);
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 10px 10px;
+  }
+  .carDetail {
+    width: 100%;
+    max-width: 294px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0px 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .carDetail__image--car {
+    width: 116px;
+    height: 80px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 10px;
+  }
+  .carDetail__title {
+    font-size: 2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 0 0 5px;
+  }
+  .carDetail__image--ratingStars {
+    width: 76px;
+    height: 12px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+  }
+  .carDetails__description {
+    font-size: 1.2rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 0 0 0 5px;
+    align-self: center;
+  }
+  .rentalSummary__priceBox {
+    width: 100%;
+    max-width: 294px;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 1fr 1fr 1fr;
+    margin: 10px 0 0 0;
+  }
+  .priceBox--label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--textSecondaryColor);
+    text-decoration: none;
+  }
+  .priceBox--price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .priceBox__subtotal {
+    margin: 5px 0 0 0;
+    grid-template-rows: 1/2;
+    grid-template-columns: 1/2;
+  }
+  .priceBox__tax {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .priceBox__price {
+    margin: 5px 0 0 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .priceBox__taxPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-end;
+  }
+  .priceBox--input {
+    font-size: 1.2rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    flex-grow: 2;
+  }
+  .priceBox--input::placeholder {
+    padding-left: 10px;
+  }
+  .priceBox--input:focus {
+    outline: none;
+  }
+  .promo__form:focus-within {
+    outline: 1px solid blue;
+  }
+  .promo__form {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .promo__submit {
+    width: 95px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: 1.2rem;
+    margin-left: -50px;
+  }
+  .promo__submit:hover {
+    background-color: var(--secondaryColor);
+    transition: 0.2s ease-in all;
+    cursor: pointer;
+  }
+  .priceBox__totalPrice__label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 1.2rem;
+  }
+  .priceBox__description {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    font-size: 1rem;
+    color: var(--textSecondaryColor);
+    margin: 0 0 0 10px;
+  }
+  .priceBox__totalPrice {
+    grid-row: 4/6;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+  }
+  .billingInfo {
+    width: 100%;
+    max-width: 327px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .--formBox {
+    padding: 15px 0 10px 0;
+    width: 295px;
+  }
+  .billingInfo__form,
+  .mainTopic--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 15px 0;
+  }
+  .billingInfo--label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .billingInfo--input {
+    width: 295px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.4rem;
+  }
+  .billingInfo--input::placeholder,
+  .billingInfo--input:hover,
+  .billingInfo--input:focus,
+  .billingInfo--input:active {
+    outline: none;
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .rentalInfo {
+    width: 100%;
+    max-width: 327px;
+    background-color: var(--primaryColor);
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rentalInfo--label,
+  .paymentMethod--label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 5px 0 0 0;
+  }
+  .rentalInfo--input,
+  .paymentMethod--input {
+    width: 295px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.4rem;
+  }
+  .rentalInfo--input::placeholder,
+  .rentalInfo--input:hover,
+  .rentalInfo--input:focus,
+  .rentalInfo--input:active {
+    outline: none;
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .pickUp__title,
+  .dropOff__title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 1.6rem;
+  }
+  .bulletline--icon {
+    color: var(--secondaryColor);
+    margin: 0 3px -1px 0;
+  }
+  .paymentMethod {
+    width: 100%;
+    max-width: 327px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod__visa {
+    width: 100%;
+    max-width: 295px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+  }
+  .paymentMethod--title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    order: 1;
+  }
+  .paymentMethod__image--visa {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+  .radio--title {
+    order: 2;
+    margin: -1px 0 0 10px;
+    font-size: 1.6rem;
+    align-self: center;
+    margin-right: auto;
+  }
+  .visa__title {
+    width: 263px;
+    display: flex;
+    margin: 0 0 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod--input {
+    width: 263px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.4rem;
+  }
+
+  .paymentMethod--input::placeholder,
+  .paymentMethod--input:hover,
+  .paymentMethod--input:focus,
+  .paymentMethod--input:active {
+    outline: none;
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .paymentMethod__paypal,
+  .paymentMethod__bitcoin {
+    width: 295px;
+    height: 52px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  }
+  .paymentMethod--image {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+  .confirmation {
+    width: 100%;
+    max-width: 327px;
+    background-color: var(--primaryColor);
+    margin: 15px 0 15px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .confirmation--form {
+    width: 295px;
+    height: 64px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 10px 0;
+  }
+  .checkBox--description {
+    width: 231px;
+    height: 44px;
+    margin: 10px 0 0 10px;
+    font-size: 1.2rem;
+  }
+  .checkBox--description > a {
+    font-size: 1.2rem;
+    color: var(--textColor);
+    text-decoration: underline 0.5px;
+  }
+  .checkBox--description > a:hover,
+  .checkBox--description > a:active,
+  .checkBox--description > a:focus {
+    color: var(--secondaryColor);
+  }
+  #submit__button {
+    width: 100px;
+    height: 36px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    align-self: flex-start;
+    margin: 10px 0 30px 20px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .confirmation__securityBox {
+    width: 295px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 15px 0;
+  }
+  .confirmation__image {
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 0 0px;
+  }
+  .securityBox__title {
+    margin: 10px 10px 10px 0;
+  }
+  .security__description {
+    margin: 0 10px 0 0;
+  }
+  footer {
+    width: 100%;
+    max-width: 374.98px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 1fr 1fr 100px;
+  }
+  .footer--list {
+    width: 142px;
+    height: 192px;
+    color: var(--textColor);
+    font-size: 2rem;
+    margin: 5px 0 0 20px;
+    list-style: none;
+  }
+  .list--item,
+  .item--link {
+    color: var(--textSecondaryColor);
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 5px 0 0 0;
+    margin: 5px 0 5px 0;
+  }
+  .footer__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 10px 0 0 0;
+  }
+  .footer__description {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    margin-left: 30px;
+  }
+  .about__list {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .social__list {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .community__list {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .footer__info {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    justify-items: center;
+    align-items: center;
+  }
+  .footer--link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .footer--link:hover,
+  .footer--link:active,
+  .footer--link:focus,
+  .item--link:focus,
+  .item--link:active,
+  .item--link:hover {
+    color: var(--secondaryColor);
+  }
+  .footer__info1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .footer__info2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footer__info3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .bi-c-circle {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .cardBox,
+  .holderBox,
+  .cvcBox,
+  .dateBox {
+    width: 263px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 480px) {
+  .container {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonBox {
+    display: none;
+  }
+  .header {
+    width: 100%;
+    max-width: 479.98;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+  }
+  .site--title {
+    color: var(--secondaryColor);
+    font-size: 2.4rem;
+    padding: 0 0 0 30px;
+  }
+  .header__profile {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+  }
+  .mainTopic {
+    width: 100%;
+    max-width: 479.98px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .rentalSummary {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    margin: 15px 0;
+    border-radius: 10px;
+  }
+  .mainTopic--title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .mainTopic--description {
+    width: 295px;
+    color: var(--textSecondaryColor);
+    font-size: 1.2rem;
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 10px 10px;
+  }
+  .carDetail {
+    width: 100%;
+    max-width: 320px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0px 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .carDetail__image--car {
+    width: 116px;
+    height: 80px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 10px;
+  }
+  .carDetail__title {
+    font-size: 2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 0 0 5px;
+  }
+  .carDetail__image--ratingStars {
+    width: 76px;
+    height: 12px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+  }
+  .carDetails__description {
+    font-size: 1.2rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 0 0 0 5px;
+    align-self: center;
+  }
+  .priceBox--label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--textSecondaryColor);
+    text-decoration: none;
+  }
+  .priceBox--price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .rentalSummary__priceBox {
+    width: 320px;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 1fr 1fr 1fr;
+  }
+  .priceBox__subtotal {
+    margin: 5px 0 0 0;
+    grid-template-rows: 1/2;
+    grid-template-columns: 1/2;
+  }
+  .priceBox__tax {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .priceBox__price {
+    margin: 5px 0 0 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .priceBox__taxPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-end;
+  }
+  .priceBox--input {
+    font-size: 1.2rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    flex-grow: 2;
+  }
+  .priceBox--input::placeholder {
+    padding-left: 10px;
+  }
+  .priceBox--input:focus {
+    outline: none;
+  }
+  .promo__form:focus-within {
+    outline: 1px solid blue;
+  }
+  .promo__form {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .promo__submit {
+    width: 95px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: 1.2rem;
+    margin-left: -50px;
+  }
+  .promo__submit:hover {
+    background-color: var(--secondaryColor);
+    transition: 0.2s ease-in all;
+    cursor: pointer;
+  }
+  .priceBox__totalPrice__label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 1.2rem;
+  }
+  .priceBox__description {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    font-size: 1rem;
+    color: var(--textSecondaryColor);
+    margin: 0 0 0 10px;
+  }
+  .priceBox__totalPrice {
+    grid-row: 4/6;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+  }
+  .billingInfo {
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .billingInfo__form,
+  .mainTopic--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 15px 0;
+  }
+  .billingInfo--label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .billingInfo--input {
+    width: 310px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.4rem;
+  }
+  .billingInfo--input::placeholder,
+  .billingInfo--input:hover,
+  .billingInfo--input:focus,
+  .billingInfo--input:active {
+    outline: none;
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .rentalInfo {
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--primaryColor);
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rentalInfo--label,
+  .paymentMethod--label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 5px 0 0 0;
+  }
+  .rentalInfo--input,
+  .paymentMethod--input {
+    width: 310px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.4rem;
+  }
+  .rentalInfo--input::placeholder,
+  .rentalInfo--input:hover,
+  .rentalInfo--input:focus,
+  .rentalInfo--input:active {
+    outline: none;
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .pickUp__title,
+  .dropOff__title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 1.6rem;
+  }
+  .bulletline--icon {
+    color: var(--secondaryColor);
+    margin: 0 3px -1px 0;
+  }
+  .paymentMethod {
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod__visa {
+    width: 100%;
+    max-width: 310px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+  }
+  .paymentMethod--title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    order: 1;
+  }
+  .paymentMethod__image--visa {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+  .radio--title {
+    order: 2;
+    margin: -1px 0 0 10px;
+    font-size: 1.6rem;
+    align-self: center;
+    margin-right: auto;
+  }
+  .visa__title {
+    width: 263px;
+    display: flex;
+    margin: 10px 0 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod--input {
+    width: 263px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.4rem;
+  }
+
+  .paymentMethod--input::placeholder,
+  .paymentMethod--input:hover,
+  .paymentMethod--input:focus,
+  .paymentMethod--input:active {
+    outline: none;
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .paymentMethod__paypal,
+  .paymentMethod__bitcoin {
+    width: 310px;
+    height: 52px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  }
+  .paymentMethod--image {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+  .confirmation {
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--primaryColor);
+    margin: 15px 0 15px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .confirmation--form {
+    width: 310px;
+    height: 64px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 10px 0;
+  }
+  .checkBox--description {
+    width: 231px;
+    height: 44px;
+    margin: 10px 0 0 10px;
+    font-size: 1.2rem;
+  }
+  .checkBox--description > a {
+    font-size: 1.2rem;
+    color: var(--textColor);
+    text-decoration: underline 0.5px;
+  }
+  .checkBox--description > a:hover,
+  .checkBox--description > a:active,
+  .checkBox--description > a:focus {
+    color: var(--secondaryColor);
+  }
+  #submit__button {
+    width: 100px;
+    height: 36px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    align-self: flex-start;
+    margin: 10px 0 30px 20px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .confirmation__securityBox {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 15px 0;
+  }
+  .confirmation__image {
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 0 0px;
+  }
+  .securityBox__title {
+    margin: 10px 10px 10px 0;
+  }
+  .security__description {
+    margin: 0 10px 0 0;
+  }
+  footer {
+    width: 100%;
+    max-width: 479.98px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 1fr 1fr 100px;
+  }
+  .footer--list {
+    width: 142px;
+    height: 192px;
+    color: var(--textColor);
+    font-size: 2rem;
+    margin: 5px 0 0 20px;
+    list-style: none;
+  }
+  .list--item,
+  .item--link {
+    color: var(--textSecondaryColor);
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 5px 0 0 0;
+    margin: 5px 0 5px 0;
+  }
+  .footer__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 10px 0 0 0;
+  }
+  .footer__description {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    margin-left: 30px;
+  }
+  .about__list {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .social__list {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .community__list {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .footer__info {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    justify-items: center;
+    align-items: center;
+  }
+  .footer--link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .footer--link:hover,
+  .footer--link:active,
+  .footer--link:focus,
+  .item--link:focus,
+  .item--link:active,
+  .item--link:hover {
+    color: var(--secondaryColor);
+  }
+  .footer__info1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .footer__info2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footer__info3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .bi-c-circle {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .--formBox {
+    padding: 15px 0 10px 0;
+    width: 310px;
+  }
+  .cardBox,
+  .holderBox,
+  .cvcBox,
+  .dateBox {
+    width: 263px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .container {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonBox {
+    display: none;
+  }
+  .header {
+    width: 100%;
+    max-width: 719.98;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+  }
+  .site--title {
+    color: var(--secondaryColor);
+    font-size: 2.4rem;
+    padding: 0 0 0 30px;
+  }
+  .header__profile {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+  }
+  .mainTopic {
+    width: 100%;
+    max-width: 719.98px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .rentalSummary {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    margin: 35px 0;
+    border-radius: 10px;
+  }
+  .mainTopic--title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .mainTopic--description {
+    width: 495px;
+    color: var(--textSecondaryColor);
+    font-size: 1.6rem;
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 10px 10px;
+  }
+  .carDetail {
+    width: 100%;
+    max-width: 520px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .carDetail__image--car {
+    width: 136px;
+    height: 90px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 10px;
+  }
+  .carDetail__title {
+    font-size: 2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 0 0 5px;
+  }
+  .carDetail__image--ratingStars {
+    width: 96px;
+    height: 22px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+  }
+  .carDetails__description {
+    font-size: 1.6rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 0 0 0 5px;
+    align-self: center;
+  }
+  .priceBox--label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textSecondaryColor);
+    text-decoration: none;
+  }
+  .priceBox--price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .rentalSummary__priceBox {
+    width: 520px;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 1fr 1fr 1fr;
+  }
+  .priceBox__subtotal {
+    margin: 5px 0 0 0;
+    grid-template-rows: 1/2;
+    grid-template-columns: 1/2;
+  }
+  .priceBox__tax {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .priceBox__price {
+    margin: 5px 0 0 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .priceBox__taxPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-end;
+  }
+  .priceBox--input {
+    font-size: 1.6rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    flex-grow: 2;
+  }
+  .priceBox--input::placeholder {
+    padding-left: 10px;
+  }
+  .priceBox--input:focus {
+    outline: none;
+  }
+  .promo__form:focus-within {
+    outline: 1px solid blue;
+  }
+  .promo__form {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .promo__submit {
+    width: 105px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: 1.6rem;
+    margin-left: -50px;
+  }
+  .promo__submit:hover {
+    background-color: var(--secondaryColor);
+    transition: 0.2s ease-in all;
+    cursor: pointer;
+  }
+  .priceBox__totalPrice__label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 1.6rem;
+  }
+  .priceBox__description {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    font-size: 1.4rem;
+    color: var(--textSecondaryColor);
+    margin: 0 0 0 10px;
+  }
+  .priceBox__totalPrice {
+    grid-row: 4/6;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+  }
+  .billingInfo {
+    width: 100%;
+    max-width: 560px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .billingInfo__form,
+  .mainTopic--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 15px 0;
+  }
+  .billingInfo--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .billingInfo--input {
+    width: 510px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+  .billingInfo--input::placeholder,
+  .billingInfo--input:hover,
+  .billingInfo--input:focus,
+  .billingInfo--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .rentalInfo {
+    width: 100%;
+    max-width: 560px;
+    background-color: var(--primaryColor);
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rentalInfo--label,
+  .paymentMethod--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 5px 0 0 0;
+  }
+  .rentalInfo--input,
+  .paymentMethod--input {
+    width: 510px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+  .rentalInfo--input::placeholder,
+  .rentalInfo--input:hover,
+  .rentalInfo--input:focus,
+  .rentalInfo--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .pickUp__title,
+  .dropOff__title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2rem;
+  }
+  .bulletline--icon {
+    color: var(--secondaryColor);
+    margin: 0 3px -1px 0;
+  }
+  .paymentMethod {
+    width: 100%;
+    max-width: 560px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod__visa {
+    width: 100%;
+    max-width: 510px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+  }
+  .paymentMethod--title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    order: 1;
+  }
+  .paymentMethod__image--visa {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+  .radio--title {
+    order: 2;
+    margin: -1px 0 0 10px;
+    font-size: 2rem;
+    align-self: center;
+    margin-right: auto;
+  }
+  .visa__title {
+    width: 493px;
+    display: flex;
+    margin: 0 0 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod--input {
+    width: 463px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+
+  .paymentMethod--input::placeholder,
+  .paymentMethod--input:hover,
+  .paymentMethod--input:focus,
+  .paymentMethod--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .paymentMethod__paypal,
+  .paymentMethod__bitcoin {
+    width: 510px;
+    height: 52px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  }
+  .paymentMethod--image {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+  .confirmation {
+    width: 100%;
+    max-width: 560px;
+    background-color: var(--primaryColor);
+    margin: 15px 0 15px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .confirmation--form {
+    width: 510px;
+    height: 64px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 10px 0;
+  }
+  .checkBox--description {
+    width: 431px;
+    height: 44px;
+    margin: 10px 0 0 10px;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .checkBox--description > a {
+    font-size: 1.6rem;
+    color: var(--textColor);
+    text-decoration: underline 0.5px;
+  }
+  .checkBox--description > a:hover,
+  .checkBox--description > a:active,
+  .checkBox--description > a:focus {
+    color: var(--secondaryColor);
+  }
+  #submit__button {
+    width: 120px;
+    height: 46px;
+    font-size: 1.6rem;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    align-self: flex-start;
+    margin: 10px 0 30px 20px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .confirmation__securityBox {
+    width: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 15px 0;
+  }
+  .confirmation__image {
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .securityBox__title {
+    margin: 10px 10px 10px 0;
+  }
+  .security__description {
+    margin: 0 10px 0 0;
+  }
+  footer {
+    width: 100%;
+    max-width: 719.98px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px 1fr 1fr 100px;
+  }
+  .footer--list {
+    width: 172px;
+    height: 192px;
+    color: var(--textColor);
+    font-size: 2rem;
+    margin: 30px 0 0 20px;
+    list-style: none;
+  }
+  .list--item,
+  .item--link {
+    color: var(--textSecondaryColor);
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 5px 0 0 0;
+    margin: 5px 0 5px 0;
+  }
+  .footer__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 10px 0 0 0;
+  }
+  .footer__description {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    margin-left: 30px;
+  }
+  .about__list {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .social__list {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .community__list {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .footer__info {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px;
+    justify-items: center;
+    align-items: center;
+  }
+  .footer--link {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .footer--link:hover,
+  .footer--link:active,
+  .footer--link:focus,
+  .item--link:focus,
+  .item--link:active,
+  .item--link:hover {
+    color: var(--secondaryColor);
+  }
+  .footer__info1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .footer__info2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footer__info3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .bi-c-circle {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .--formBox {
+    padding: 15px 0 10px 0;
+    width: 510px;
+  }
+  .cardBox,
+  .holderBox,
+  .cvcBox,
+  .dateBox {
+    width: 463px;
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .container {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header--button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--iconsSecondaryColor);
+    border-radius: 50%;
+    color: var(--iconsColor);
+    background-color: var(--primaryColor);
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+  }
+  .header--button:hover,
+  .header--button:focus {
+    box-shadow: 1px 1px 8px var(--secondaryColor);
+    transition: 0.5s all ease-in-out;
+  }
+  .bi {
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 14px;
+  }
+  .header {
+    width: 100%;
+    max-width: 1023.98;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+  }
+  .site--title {
+    color: var(--secondaryColor);
+    font-size: 2.4rem;
+    padding: 0 0 0 30px;
+  }
+  .header__profile {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+    order: 4;
+  }
+  .profile--phoneSize {
+    display: none;
+  }
+  .mainTopic {
+    width: 100%;
+    max-width: 1023.98px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .rentalSummary {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    margin: 35px 0;
+    border-radius: 10px;
+  }
+  .mainTopic--title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .mainTopic--description {
+    width: 695px;
+    color: var(--textSecondaryColor);
+    font-size: 1.8rem;
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 10px 10px;
+  }
+  .carDetail {
+    width: 100%;
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .carDetail__image--car {
+    width: 156px;
+    height: 100px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 10px;
+  }
+  .carDetail__title {
+    font-size: 2.2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 0 0 5px;
+  }
+  .carDetail__image--ratingStars {
+    width: 96px;
+    height: 22px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+  }
+  .carDetails__description {
+    font-size: 1.8rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 0 0 0 5px;
+    align-self: center;
+  }
+  .priceBox--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textSecondaryColor);
+    text-decoration: none;
+  }
+  .priceBox--price {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .rentalSummary__priceBox {
+    width: 720px;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 1fr 1fr 1fr;
+  }
+  .priceBox__subtotal {
+    margin: 15px 0 5px 0;
+    grid-template-rows: 1/2;
+    grid-template-columns: 1/2;
+  }
+  .priceBox__tax {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__price {
+    margin: 5px 0 5px 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .priceBox__taxPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-end;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input {
+    font-size: 1.8rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    flex-grow: 2;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input::placeholder {
+    padding-left: 10px;
+  }
+  .priceBox--input:focus {
+    outline: none;
+  }
+  .promo__form:focus-within {
+    outline: 1px solid blue;
+  }
+  .promo__form {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .promo__submit {
+    width: 105px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: 1.8rem;
+    margin: 5px 0 5px -50px;
+  }
+  .promo__submit:hover {
+    background-color: var(--secondaryColor);
+    transition: 0.2s ease-in all;
+    cursor: pointer;
+  }
+  .priceBox__totalPrice__label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 1.8rem;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__description {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    font-size: 1.4rem;
+    color: var(--textSecondaryColor);
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__totalPrice {
+    grid-row: 4/6;
+    grid-column: 2/3;
+    justify-self: flex-end;
+    align-self: center;
+  }
+  .billingInfo {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .billingInfo__form,
+  .mainTopic--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 15px 0;
+  }
+  .billingInfo--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .billingInfo--input {
+    width: 710px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+  .billingInfo--input::placeholder,
+  .billingInfo--input:hover,
+  .billingInfo--input:focus,
+  .billingInfo--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .rentalInfo {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rentalInfo--label,
+  .paymentMethod--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 5px 0 0 0;
+  }
+  .rentalInfo--input,
+  .paymentMethod--input {
+    width: 710px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+  .rentalInfo--input::placeholder,
+  .rentalInfo--input:hover,
+  .rentalInfo--input:focus,
+  .rentalInfo--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .pickUp__title,
+  .dropOff__title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2.2rem;
+  }
+  .bulletline--icon {
+    color: var(--secondaryColor);
+    margin: 0 3px -1px 0;
+  }
+  .paymentMethod {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod__visa {
+    width: 100%;
+    max-width: 710px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+  }
+  .paymentMethod--title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    order: 1;
+  }
+  .paymentMethod__image--visa {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+  .radio--title {
+    order: 2;
+    margin: -1px 0 0 10px;
+    font-size: 2.2rem;
+    align-self: center;
+    margin-right: auto;
+  }
+  .visa__title {
+    width: 693px;
+    display: flex;
+    margin: 0 0 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod--input {
+    width: 663px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+
+  .paymentMethod--input::placeholder,
+  .paymentMethod--input:hover,
+  .paymentMethod--input:focus,
+  .paymentMethod--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .paymentMethod__paypal,
+  .paymentMethod__bitcoin {
+    width: 710px;
+    height: 52px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  }
+  .paymentMethod--image {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+  .confirmation {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    margin: 15px 0 15px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .confirmation--form {
+    width: 710px;
+    height: 64px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 10px 0;
+  }
+  .checkBox--description {
+    width: 631px;
+    height: 44px;
+    margin: 10px 0 0 10px;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .checkBox--description > a {
+    font-size: 1.8rem;
+    color: var(--textColor);
+    text-decoration: underline 0.5px;
+  }
+  .checkBox--description > a:hover,
+  .checkBox--description > a:active,
+  .checkBox--description > a:focus {
+    color: var(--secondaryColor);
+  }
+  #submit__button {
+    width: 120px;
+    height: 46px;
+    font-size: 1.8rem;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    align-self: flex-start;
+    margin: 10px 0 30px 20px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .confirmation__securityBox {
+    width: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 15px 0;
+  }
+  .confirmation__image {
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .securityBox__title {
+    margin: 10px 10px 10px 0;
+  }
+  .security__description {
+    width: 500px;
+    margin: 0 10px 0 0;
+  }
+  footer {
+    width: 100%;
+    max-width: 1023.98px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px 1fr 1fr 100px;
+  }
+  .footer--list {
+    width: 192px;
+    height: 192px;
+    color: var(--textColor);
+    font-size: 2.2rem;
+    margin: 30px 0 0 40px;
+    list-style: none;
+  }
+  .list--item,
+  .item--link {
+    color: var(--textSecondaryColor);
+    font-size: 2.2rem;
+    text-decoration: none;
+    padding: 5px 0 0 0;
+    margin: 5px 0 5px 0;
+  }
+  .footer__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 10px 0 0 0;
+  }
+  .footer__description {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    margin-left: 30px;
+  }
+  .about__list {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .social__list {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .community__list {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .footer__info {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+  }
+  .footer--link {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .footer--link:hover,
+  .footer--link:active,
+  .footer--link:focus,
+  .item--link:focus,
+  .item--link:active,
+  .item--link:hover {
+    color: var(--secondaryColor);
+  }
+  .footer__info1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .footer__info2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footer__info3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .bi-c-circle {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .--formBox {
+    width: 710px;
+    padding: 15px 0 10px 0;
+  }
+  .cardBox,
+  .holderBox,
+  .cvcBox,
+  .dateBox {
+    width: 663px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1279px) {
+  .container {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+    max-width: 1279px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header--button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--iconsSecondaryColor);
+    border-radius: 50%;
+    color: var(--iconsColor);
+    background-color: var(--primaryColor);
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+  }
+  .header--button:hover,
+  .header--button:focus {
+    box-shadow: 1px 1px 8px var(--secondaryColor);
+    transition: 0.5s all ease-in-out;
+  }
+  .bi {
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 14px;
+  }
+  .header {
+    width: 100%;
+    max-width: 1278.98;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+  }
+  .site--title {
+    color: var(--secondaryColor);
+    font-size: 2.4rem;
+    padding: 0 0 0 30px;
+  }
+  .header__profile {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+    order: 4;
+  }
+  .profile--phoneSize {
+    display: none;
+  }
+  .mainTopic {
+    width: 100%;
+    max-width: 1278.98px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .rentalSummary {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    margin: 35px 0;
+    border-radius: 10px;
+  }
+  .mainTopic--title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .mainTopic--description {
+    width: 695px;
+    color: var(--textSecondaryColor);
+    font-size: 1.8rem;
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 10px 10px;
+  }
+  .carDetail {
+    width: 100%;
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .carDetail__image--car {
+    width: 156px;
+    height: 100px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 10px;
+  }
+  .carDetail__title {
+    font-size: 2.2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 0 0 5px;
+  }
+  .carDetail__image--ratingStars {
+    width: 96px;
+    height: 22px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+  }
+  .carDetails__description {
+    font-size: 1.8rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 0 0 0 5px;
+    align-self: center;
+  }
+  .priceBox--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textSecondaryColor);
+    text-decoration: none;
+  }
+  .priceBox--price {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .rentalSummary__priceBox {
+    width: 720px;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 1fr 1fr 1fr;
+  }
+  .priceBox__subtotal {
+    margin: 15px 0 5px 0;
+    grid-template-rows: 1/2;
+    grid-template-columns: 1/2;
+  }
+  .priceBox__tax {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__price {
+    margin: 5px 0 5px 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .priceBox__taxPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-end;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input {
+    font-size: 1.8rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    flex-grow: 2;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input::placeholder {
+    padding-left: 10px;
+  }
+  .priceBox--input:focus {
+    outline: none;
+  }
+  .promo__form:focus-within {
+    outline: 1px solid blue;
+  }
+  .promo__form {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .promo__submit {
+    width: 105px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: 1.8rem;
+    margin: 5px 0 5px -50px;
+  }
+  .promo__submit:hover {
+    background-color: var(--secondaryColor);
+    transition: 0.2s ease-in all;
+    cursor: pointer;
+  }
+  .priceBox__totalPrice__label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 1.8rem;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__description {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    font-size: 1.4rem;
+    color: var(--textSecondaryColor);
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__totalPrice {
+    grid-row: 4/6;
+    grid-column: 2/3;
+    justify-self: flex-end;
+    align-self: center;
+  }
+  .billingInfo {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .billingInfo__form,
+  .mainTopic--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 15px 0;
+  }
+  .billingInfo--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .billingInfo--input {
+    width: 710px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+  .billingInfo--input::placeholder,
+  .billingInfo--input:hover,
+  .billingInfo--input:focus,
+  .billingInfo--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .rentalInfo {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rentalInfo--label,
+  .paymentMethod--label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 5px 0 0 0;
+  }
+  .rentalInfo--input,
+  .paymentMethod--input {
+    width: 710px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+  .rentalInfo--input::placeholder,
+  .rentalInfo--input:hover,
+  .rentalInfo--input:focus,
+  .rentalInfo--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .pickUp__title,
+  .dropOff__title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2.2rem;
+  }
+  .bulletline--icon {
+    color: var(--secondaryColor);
+    margin: 0 3px -1px 0;
+  }
+  .paymentMethod {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod__visa {
+    width: 100%;
+    max-width: 710px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+  }
+  .paymentMethod--title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    order: 1;
+  }
+  .paymentMethod__image--visa {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+  }
+  .radio--title {
+    order: 2;
+    margin: -1px 0 0 10px;
+    font-size: 2.2rem;
+    align-self: center;
+    margin-right: auto;
+  }
+  .visa__title {
+    width: 693px;
+    display: flex;
+    margin: 0 0 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .paymentMethod--input {
+    width: 663px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.8rem;
+  }
+
+  .paymentMethod--input::placeholder,
+  .paymentMethod--input:hover,
+  .paymentMethod--input:focus,
+  .paymentMethod--input:active {
+    outline: none;
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+  .paymentMethod__paypal,
+  .paymentMethod__bitcoin {
+    width: 710px;
+    height: 52px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  }
+  .paymentMethod--image {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+  .confirmation {
+    width: 100%;
+    max-width: 760px;
+    background-color: var(--primaryColor);
+    margin: 15px 0 15px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .confirmation--form {
+    width: 710px;
+    height: 64px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 10px 0;
+  }
+  .checkBox--description {
+    width: 631px;
+    height: 44px;
+    margin: 10px 0 0 10px;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .checkBox--description > a {
+    font-size: 1.8rem;
+    color: var(--textColor);
+    text-decoration: underline 0.5px;
+  }
+  .checkBox--description > a:hover,
+  .checkBox--description > a:active,
+  .checkBox--description > a:focus {
+    color: var(--secondaryColor);
+  }
+  #submit__button {
+    width: 120px;
+    height: 46px;
+    font-size: 1.8rem;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    align-self: flex-start;
+    margin: 10px 0 30px 20px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .confirmation__securityBox {
+    width: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 15px 0;
+  }
+  .confirmation__image {
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .securityBox__title {
+    margin: 10px 10px 10px 0;
+  }
+  .security__description {
+    width: 500px;
+    margin: 0 10px 0 0;
+  }
+  footer {
+    width: 100%;
+    max-width: 1278.98px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px 1fr 1fr 100px;
+  }
+  .footer--list {
+    width: 192px;
+    height: 192px;
+    color: var(--textColor);
+    font-size: 2.2rem;
+    margin: 30px 0 0 40px;
+    list-style: none;
+  }
+  .list--item,
+  .item--link {
+    color: var(--textSecondaryColor);
+    font-size: 2.2rem;
+    text-decoration: none;
+    padding: 5px 0 0 0;
+    margin: 5px 0 5px 0;
+  }
+  .footer__title {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 10px 0 0 0;
+  }
+  .footer__description {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    margin-left: 30px;
+  }
+  .about__list {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .social__list {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .community__list {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+  .footer__info {
+    grid-row: 5/6;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+  }
+  .footer--link {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .footer--link:hover,
+  .footer--link:active,
+  .footer--link:focus,
+  .item--link:focus,
+  .item--link:active,
+  .item--link:hover {
+    color: var(--secondaryColor);
+  }
+  .footer__info1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .footer__info2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footer__info3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .bi-c-circle {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .--formBox {
+    width: 710px;
+    padding: 15px 0 10px 0;
+  }
+  .cardBox,
+  .holderBox,
+  .cvcBox,
+  .dateBox {
+    width: 663px;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .container {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+    max-width: 5396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 124px 1fr 1fr;
+    grid-template-areas:
+      "header" "header"
+      "main" "main"
+      "footer" "footer";
+    justify-content: center;
+    align-items: center; */
+  }
+  .buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header--button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--iconsSecondaryColor);
+    border-radius: 50%;
+    color: var(--iconsColor);
+    background-color: var(--primaryColor);
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+  }
+  .header--button:hover,
+  .header--button:focus {
+    box-shadow: 1px 1px 8px var(--secondaryColor);
+    transition: 0.5s all ease-in-out;
+  }
+  .bi {
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 14px;
+  }
+  .header {
+    width: 100%;
+    max-width: 1438.99px;
+    height: 124px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+    grid-area: header;
+  }
+  .site--title {
+    color: var(--secondaryColor);
+    font-size: 2.4rem;
+    padding: 0 0 0 30px;
+  }
+  .header__profile {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+    order: 4;
+  }
+  .profile--phoneSize {
+    display: none;
+  }
+  .mainTopic {
+    width: 100%;
+    max-width: 1438.98px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .rentalSummary {
+    width: 100%;
+    max-width: 442px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    margin: 32px 32px 0 auto;
+
+    border-radius: 10px;
+    order: 2;
+  }
+  .mainTopic--title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0 10px 24px;
+  }
+  .mainTopic--description {
+    width: 394px;
+    color: var(--textSecondaryColor);
+    font-size: 1.4rem;
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 10px 24px;
+  }
+  .carDetail {
+    width: 100%;
+    max-width: 394px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .carDetail__image--car {
+    width: 122px;
+    height: 98px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 10px;
+  }
+  .carDetail__title {
+    font-size: 3.2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 0 0 5px;
+  }
+  .carDetail__image--ratingStars {
+    width: 108px;
+    height: 20px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+  }
+  .carDetails__description {
+    font-size: 1.4rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 0 0 0 5px;
+    align-self: center;
+  }
+  .priceBox--label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textSecondaryColor);
+    text-decoration: none;
+  }
+  .priceBox--price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .rentalSummary__priceBox {
+    width: 394px;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 1fr 1fr 1fr;
+  }
+  .priceBox__subtotal {
+    margin: 15px 0 5px 0;
+    grid-template-rows: 1/2;
+    grid-template-columns: 1/2;
+  }
+  .priceBox__tax {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__price {
+    margin: 5px 0 5px 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .priceBox__taxPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-end;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input {
+    font-size: 1.6rem;
+    width: 394px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    flex-grow: 2;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input::placeholder {
+    padding-left: 10px;
+  }
+  .priceBox--input:focus {
+    outline: none;
+  }
+  .promo__form:focus-within {
+    outline: 1px solid blue;
+  }
+  .promo__form {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .promo__submit {
+    width: 125px;
+    height: 56px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: 1.6rem;
+    margin: 5px 0 5px -50px;
+  }
+  .promo__submit:hover {
+    background-color: var(--secondaryColor);
+    transition: 0.2s ease-in all;
+    cursor: pointer;
+  }
+  .priceBox__totalPrice__label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__description {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    font-size: 1.4rem;
+    color: var(--textSecondaryColor);
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__totalPrice {
+    grid-row: 4/6;
+    grid-column: 2/3;
+    justify-self: flex-end;
+    align-self: center;
+    font-size: 3.2rem;
+  }
+  .billingInfo {
+    width: 100%;
+    max-width: 772px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 32px 32px;
+    order: 1;
+    align-self: self-start;
+  }
+  .billingInfo__form,
+  .mainTopic--form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px 0 15px 0px;
+  }
+  .--formBox {
+    width: 346px;
+    height: 92px;
+    margin: 15px 0 15px 24px;
+  }
+  .billingInfo--label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin: 10px 0 10px 0;
+  }
+  .billingInfo--input {
+    width: 346px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.6rem;
+  }
+  .billingInfo--input::placeholder,
+  .billingInfo--input:hover,
+  .billingInfo--input:focus,
+  .billingInfo--input:active {
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+  .rentalInfo {
+    width: 100%;
+    max-width: 772px;
+    background-color: var(--primaryColor);
+    margin: -142px 0 32px 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+  }
+  .pickUp__form,
+  .dropOff__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr;
+  }
+
+  .rentalInfo--label,
+  .paymentMethod--label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 5px 0 0 0;
+  }
+  .rentalInfo--input,
+  .paymentMethod--input {
+    width: 346px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.6rem;
+  }
+  .rentalInfo--input::placeholder,
+  .rentalInfo--input:hover,
+  .rentalInfo--input:focus,
+  .rentalInfo--input:active {
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+  .pickUp__title,
+  .dropOff__title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2rem;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .pickUp__locationBox,
+  .dropOff__locationBox {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: flex-start;
+    margin: 0 16px 0 0;
+  }
+  .pickUp__timeBox,
+  .dropOff__timeBox {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: flex-start;
+    margin: 0 16px 0 0;
+  }
+
+  .pickUp__dateBox,
+  .dropOff__dateBox {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-start;
+    margin: 0 0 0 16;
+  }
+
+  .bulletline--icon {
+    color: var(--secondaryColor);
+    margin: 0 3px -1px 0;
+  }
+  .paymentMethod {
+    width: 100%;
+    max-width: 772px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: payment;
+    order: 4;
+    margin-left: 32px;
+  }
+  .paymentMethod__visa {
+    width: 100%;
+    max-width: 724px;
+    margin: 10px 0 10px 0;
+    padding: 0 0 20px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+    flex-wrap: wrap;
+  }
+  .paymentMethod--title {
+    margin: 0 0 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    order: 1;
+  }
+  .paymentMethod__image--visa {
+    order: 3;
+    justify-self: flex-end;
+    margin: 0 10px 0 auto;
+  }
+  .radio--title {
+    order: 2;
+    margin: -1px 0 0 10px;
+    font-size: 1.6rem;
+    align-self: center;
+    margin-right: auto;
+  }
+  .visa__title {
+    width: 724px;
+    height: 60px;
+    display: flex;
+    margin: 0 0 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardBox,
+  .holderBox,
+  .cvcBox,
+  .dateBox {
+    margin: 0;
+  }
+
+  .paymentMethod--input {
+    width: 326px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.6rem;
+  }
+
+  .paymentMethod--input::placeholder,
+  .paymentMethod--input:hover,
+  .paymentMethod--input:focus,
+  .paymentMethod--input:active {
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+  .paymentMethod__paypal,
+  .paymentMethod__bitcoin {
+    width: 724px;
+    height: 56px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  }
+  .paymentMethod--image {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+  .confirmation {
+    width: 100%;
+    max-width: 772px;
+    background-color: var(--primaryColor);
+    margin: 32px 0 32px 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: confirm;
+    order: 5;
+  }
+  .confirmation--form {
+    width: 724px;
+    height: 56px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin: 25px 0 10px 0;
+  }
+  .checkBox--description {
+    width: 621px;
+    height: 24px;
+    margin: 0px 0 0 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .checkBox--description > a {
+    font-size: 1.6rem;
+    color: var(--textColor);
+    text-decoration: underline 0.5px;
+  }
+  .checkBox--description > a:hover,
+  .checkBox--description > a:active,
+  .checkBox--description > a:focus {
+    color: var(--secondaryColor);
+  }
+  #submit__button {
+    width: 120px;
+    height: 46px;
+    font-size: 1.6rem;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    align-self: flex-start;
+    margin: 10px 0 30px 25px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .confirmation__securityBox {
+    width: 662px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 24px -50px;
+  }
+  .confirmation__image {
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .securityBox__title {
+    margin: 10px 10px 10px 0;
+  }
+  .security__description {
+    width: 548px;
+    margin: 0 10px 0 0;
+  }
+  footer {
+    width: 100%;
+    background-color: var(--primaryColor);
+    max-width: 1438.98px;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 70px 70px 1fr 1fr;
+    padding: 50px 0 0 0;
+  }
+  .footer--list {
+    width: 152px;
+    color: var(--textColor);
+    font-size: 2rem;
+    list-style: none;
+  }
+  .list--item,
+  .item--link {
+    color: var(--textSecondaryColor);
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 5px 0 0 0;
+    margin: 15px 0 15px 0;
+  }
+  .footer__title {
+    font-size: 3.2rem;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 10px 0 0 60px;
+    padding: 0;
+    align-self: center;
+  }
+  .footer__description {
+    width: 292px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin-left: 60px;
+  }
+  .about__list {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+  .social__list {
+    grid-row: 1/4;
+    grid-column: 3/4;
+  }
+  .community__list {
+    grid-row: 1/4;
+    grid-column: 4/5;
+    justify-self: flex-start;
+  }
+  .footer__info {
+    width: 1320px;
+    grid-row: 4/5;
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 10px 0;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    justify-self: center;
+  }
+  .footer--link {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .footer--link:hover,
+  .footer--link:active,
+  .footer--link:focus,
+  .item--link:focus,
+  .item--link:active,
+  .item--link:hover {
+    color: var(--secondaryColor);
+  }
+  .footer__info1 {
+    margin: 0 80px 0 0;
+    order: 2;
+  }
+
+  .footer__info2 {
+    order: 3;
+    margin: 0 80px 0 0;
+  }
+  .footer__info3 {
+    order: 1;
+    margin: 0 auto 0 60px;
+  }
+  .bi-c-circle {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+    max-width: 5396px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 124px 1fr 1fr;
+    grid-template-areas:
+      "header" "header"
+      "main" "main"
+      "footer" "footer";
+    justify-content: center;
+    align-items: center; */
+  }
+  .buttonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header--button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--iconsSecondaryColor);
+    border-radius: 50%;
+    color: var(--iconsColor);
+    background-color: var(--primaryColor);
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+  }
+  .header--button:hover,
+  .header--button:focus {
+    box-shadow: 1px 1px 8px var(--secondaryColor);
+    transition: 0.5s all ease-in-out;
+  }
+  .bi {
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 14px;
+  }
+  .header {
+    width: 100%;
+    max-width: 1440px;
+    height: 124px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+    grid-area: header;
+  }
+  .site--title {
+    color: var(--secondaryColor);
+    font-size: 2.4rem;
+    padding: 0 0 0 30px;
+  }
+  .header__profile {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+    order: 4;
+  }
+  .profile--phoneSize {
+    display: none;
+  }
+  .mainTopic {
+    width: 100%;
+    max-width: 1439.98px;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    /* grid-area: main;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "billing" "summary"
+      "rental" "blank"
+      "payment" "blank"
+      "confirm" "blank"; */
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .rentalSummary {
+    width: 100%;
+    max-width: 492px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    margin: 32px 32px 0 auto;
+
+    border-radius: 10px;
+    order: 2;
+  }
+  .mainTopic--title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0 10px 24px;
+  }
+  .mainTopic--description {
+    width: 444px;
+    color: var(--textSecondaryColor);
+    font-size: 1.4rem;
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 0 0 10px 24px;
+  }
+  .carDetail {
+    width: 100%;
+    max-width: 444px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px 10px;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .carDetail__image--car {
+    width: 132px;
+    height: 108px;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    border-radius: 10px;
+  }
+  .carDetail__title {
+    font-size: 3.2rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0 0 0 5px;
+  }
+  .carDetail__image--ratingStars {
+    width: 108px;
+    height: 20px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: flex-end;
+    margin: 0 0 0 5px;
+  }
+  .carDetails__description {
+    font-size: 1.4rem;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin: 0 0 0 5px;
+    align-self: center;
+  }
+  .priceBox--label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textSecondaryColor);
+    text-decoration: none;
+  }
+  .priceBox--price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .rentalSummary__priceBox {
+    width: 444px;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    margin: 10px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 20% 1fr 1fr 1fr;
+  }
+  .priceBox__subtotal {
+    margin: 15px 0 5px 0;
+    grid-template-rows: 1/2;
+    grid-template-columns: 1/2;
+  }
+  .priceBox__tax {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__price {
+    margin: 5px 0 5px 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .priceBox__taxPrice {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-end;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input {
+    font-size: 1.6rem;
+    width: 444px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    flex-grow: 2;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox--input::placeholder {
+    padding-left: 10px;
+  }
+  .priceBox--input:focus {
+    outline: none;
+  }
+  .promo__form:focus-within {
+    outline: 1px solid blue;
+  }
+  .promo__form {
+    display: flex;
+    flex-direction: row;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .promo__submit {
+    width: 125px;
+    height: 56px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-size: 1.6rem;
+    margin: 5px 0 5px -50px;
+  }
+  .promo__submit:hover {
+    background-color: var(--secondaryColor);
+    transition: 0.2s ease-in all;
+    cursor: pointer;
+  }
+  .priceBox__totalPrice__label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__description {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    font-size: 1.4rem;
+    color: var(--textSecondaryColor);
+    margin: 5px 0 5px 0;
+  }
+  .priceBox__totalPrice {
+    grid-row: 4/6;
+    grid-column: 2/3;
+    justify-self: flex-end;
+    align-self: center;
+    font-size: 3.2rem;
+  }
+  .billingInfo {
+    width: 100%;
+    max-width: 852px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 32px 32px;
+    order: 1;
+    align-self: self-start;
+  }
+  .billingInfo__form,
+  .mainTopic--form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5px 0 15px 0px;
+  }
+  .--formBox {
+    width: 386px;
+    height: 92px;
+    margin: 15px 0 15px 24px;
+  }
+  .billingInfo--label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin: 10px 0 10px 0;
+  }
+  .billingInfo--input {
+    width: 386px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.6rem;
+  }
+  .billingInfo--input::placeholder,
+  .billingInfo--input:hover,
+  .billingInfo--input:focus,
+  .billingInfo--input:active {
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+  .rentalInfo {
+    width: 100%;
+    max-width: 852px;
+    background-color: var(--primaryColor);
+    margin: -142px 0 32px 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+  }
+  .pickUp__form,
+  .dropOff__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr;
+  }
+
+  .rentalInfo--label,
+  .paymentMethod--label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--textColor);
+    align-self: flex-start;
+    margin-right: auto;
+    margin: 5px 0 0 0;
+  }
+  .rentalInfo--input,
+  .paymentMethod--input {
+    width: 386px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--backgroundColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.6rem;
+  }
+  .rentalInfo--input::placeholder,
+  .rentalInfo--input:hover,
+  .rentalInfo--input:focus,
+  .rentalInfo--input:active {
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+  .pickUp__title,
+  .dropOff__title {
+    align-self: flex-start;
+    margin-right: auto;
+    font-size: 2rem;
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .pickUp__locationBox,
+  .dropOff__locationBox {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: flex-start;
+    margin: 0 16px 0 0;
+  }
+  .pickUp__timeBox,
+  .dropOff__timeBox {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: flex-start;
+    margin: 0 16px 0 0;
+  }
+
+  .pickUp__dateBox,
+  .dropOff__dateBox {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: flex-start;
+    margin: 0 0 0 16;
+  }
+
+  .bulletline--icon {
+    color: var(--secondaryColor);
+    margin: 0 3px -1px 0;
+  }
+  .paymentMethod {
+    width: 100%;
+    max-width: 852px;
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: payment;
+    order: 4;
+    margin-left: 32px;
+  }
+  .paymentMethod__visa {
+    width: 100%;
+    max-width: 804px;
+    margin: 10px 0 10px 0;
+    padding: 0 0 20px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    border-radius: 10px;
+    flex-wrap: wrap;
+  }
+  .paymentMethod--title {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    order: 1;
+  }
+  .paymentMethod__image--visa {
+    order: 3;
+    justify-self: flex-end;
+    margin: 0 10px 0 auto;
+  }
+  .radio--title {
+    order: 2;
+    margin: -1px 0 0 10px;
+    font-size: 1.6rem;
+    align-self: center;
+    margin-right: auto;
+  }
+  .visa__title {
+    width: 804px;
+    height: 60px;
+    display: flex;
+    margin: 0 0 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardBox,
+  .holderBox,
+  .cvcBox,
+  .dateBox {
+    margin: 0;
+  }
+
+  .paymentMethod--input {
+    width: 362px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primaryColor);
+    margin: 10px 0 5px 0;
+    font-size: 1.6rem;
+  }
+
+  .paymentMethod--input::placeholder,
+  .paymentMethod--input:hover,
+  .paymentMethod--input:focus,
+  .paymentMethod--input:active {
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 10px;
+  }
+  .paymentMethod__paypal,
+  .paymentMethod__bitcoin {
+    width: 804px;
+    height: 56px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+  }
+  .paymentMethod--image {
+    order: 3;
+    justify-self: flex-end;
+    margin-left: auto;
+    padding: 0 10px;
+  }
+  .confirmation {
+    width: 100%;
+    max-width: 852px;
+    background-color: var(--primaryColor);
+    margin: 32px 0 32px 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: confirm;
+    order: 5;
+  }
+  .confirmation--form {
+    width: 804px;
+    height: 56px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    margin: 25px 0 10px 0;
+  }
+  .checkBox--description {
+    width: 681px;
+    height: 24px;
+    margin: 0px 0 0 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .checkBox--description > a {
+    font-size: 1.6rem;
+    color: var(--textColor);
+    text-decoration: underline 0.5px;
+  }
+  .checkBox--description > a:hover,
+  .checkBox--description > a:active,
+  .checkBox--description > a:focus {
+    color: var(--secondaryColor);
+  }
+  #submit__button {
+    width: 120px;
+    height: 46px;
+    font-size: 1.6rem;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 4px;
+    align-self: flex-start;
+    margin: 10px 0 30px 25px;
+    margin-right: auto;
+    cursor: pointer;
+  }
+  .confirmation__securityBox {
+    width: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 24px -80px;
+  }
+  .confirmation__image {
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  .securityBox__title {
+    margin: 10px 10px 10px 0;
+  }
+  .security__description {
+    width: 548px;
+    margin: 0 10px 0 0;
+  }
+  footer {
+    width: 100%;
+    background-color: var(--primaryColor);
+    max-width: 1439.98px;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 70px 70px 1fr 1fr;
+    padding: 50px 0 0 0;
+  }
+  .footer--list {
+    width: 152px;
+    color: var(--textColor);
+    font-size: 2rem;
+    list-style: none;
+  }
+  .list--item,
+  .item--link {
+    color: var(--textSecondaryColor);
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 5px 0 0 0;
+    margin: 15px 0 15px 0;
+  }
+  .footer__title {
+    font-size: 3.2rem;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 10px 0 0 60px;
+    padding: 0;
+    align-self: center;
+  }
+  .footer__description {
+    width: 292px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin-left: 60px;
+  }
+  .about__list {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+  .social__list {
+    grid-row: 1/4;
+    grid-column: 3/4;
+  }
+  .community__list {
+    grid-row: 1/4;
+    grid-column: 4/5;
+    justify-self: flex-start;
+  }
+  .footer__info {
+    width: 1320px;
+    grid-row: 4/5;
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 10px 0;
+    border-top: 0.5px solid var(--iconsSecondaryColor);
+    justify-self: center;
+  }
+  .footer--link {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--textColor);
+    text-decoration: none;
+  }
+  .footer--link:hover,
+  .footer--link:active,
+  .footer--link:focus,
+  .item--link:focus,
+  .item--link:active,
+  .item--link:hover {
+    color: var(--secondaryColor);
+  }
+  .footer__info1 {
+    margin: 0 80px 0 0;
+    order: 2;
+  }
+
+  .footer__info2 {
+    order: 3;
+    margin: 0 80px 0 0;
+  }
+  .footer__info3 {
+    order: 1;
+    margin: 0 auto 0 60px;
+  }
+  .bi-c-circle {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}

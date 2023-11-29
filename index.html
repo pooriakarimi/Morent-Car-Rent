@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morent Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body class="container">
+    <header class="menu">
+        <div class="buttonBox">
+            <button class="header--button button--heart"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"></path>
+                </svg></button>
+            <button class="header--button button--notif"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z">
+                    </path>
+                </svg></button>
+            <button class="header--button button--setting"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z">
+                    </path>
+                </svg></button>
+            <img class="menu__image--profile profile--phoneSize" src="/Assets/Images/profile.png" alt="profile">
+        </div>
+        <a href="" class="menu__icons--menu --links"> <svg class="menu__icon --links" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
+                </path>
+            </svg>
+        </a>
+        <a href="" class="menu__icons--setting --links"> <svg class="setting__icon  --links"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75">
+                </path>
+            </svg>
+        </a>
+        <img class="menu__image--profileTablet" src="/Assets/Images/profile.png" alt="profile">
+
+        <h3 class="menu__title">MORENT</h3>
+        <input class="menu__input" type="search" name="search" placeholder=" Search something here">
+        <path stroke-linecap="round" stroke-linejoin="round"
+            d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75">
+        </path>
+    </header>
+    <main class="mainTopic">
+        <section class="showcaseBox">
+            <section class="showcaseBox__window1 --imageBox">
+                <h1 class="imageBox__title">The Best Platform for Car Rental</h1>
+                <p class="imageBox__description">Ease of doing a car rental safely and reliably.Of course at low price.
+                </p>
+                <img src="/Assets/SVGs/CARGTR.svg" alt="car" class="imageBox__image ">
+                <button class="imageBox__button --mainTopic__button" type="button"><a href="">Rental Car</a></button>
+            </section>
+            <section class="showcaseBox__window2 --imageBox">
+                <h1 class="imageBox__title">Easy way to rent a car at low price</h1>
+                <p class="imageBox__description">Providing cheap car rental services and safe and comfortable
+                    facilities.
+                </p>
+                <img src="/Assets/SVGs/carKoenigsegg.svg" alt="car" class="imageBox__image ">
+                <button class="imageBox__button --mainTopic__button" type="button"><a href="">Rental Car</a></button>
+            </section>
+        </section>
+        <section class="pickUp --filterBox">
+            <h2 class="pickUp__title mainTopic--title"> <img src="/Assets/SVGs/Markcircle.svg" alt=""> Pick Up</h2>
+            <form action="" class="location__input mainTopic--form">
+                <label for="location" class="location__label input--label">Locations</label>
+                <input class="filterBox--input pickUp__location" type="text" name="" id="location">
+            </form>
+            <h2 class="pickUp__title mainTopic--title"></h2>
+            <form action="" class="date__input mainTopic--form">
+                <label for="date" class="date__label input--label">Date</label>
+                <input class="filterBox--input pickUp__date" type="date" name="" id="date">
+            </form>
+            <h2 class="pickUp__title mainTopic--title"></h2>
+            <form action="" class="time__input mainTopic--form">
+                <label for="time" class="time__label input--label">Time</label>
+                <input class="filterBox--input pickUp__time" type="time" name="" id="time">
+            </form>
+        </section>
+        <button type="button" class="switch__button mainTopic--button" value=""><img src="/Assets/SVGs/Swaparrows.svg"
+                alt=""></button>
+        <section class="dropOff --filterBox">
+            <h2 class="dropOff__title mainTopic--title"> <img src="/Assets/SVGs/Markcircle2.svg" alt=""> Drop Off
+            </h2>
+            <form action="" class="location__input mainTopic--form">
+                <label for="location" class="location__label input--label">Locations</label>
+                <input class="filterBox--input dropOff__location" type="text" name="" id="location">
+            </form>
+            <h2 class="dropOff__title mainTopic--title"></h2>
+            <form action="" class="date__input mainTopic--form">
+                <label for="date" class="date__label input--label">Date</label>
+                <input class="filterBox--input dropOff__date" type="date" name="" id="date">
+            </form>
+            <h2 class="dropOff__title mainTopic--title"></h2>
+            <form action="" class="time__input mainTopic--form">
+                <label for="time" class="time__label input--label">Time</label>
+                <input class="filterBox--input dropOff__date" type="time" name="" id="time">
+            </form>
+        </section>
+        <section class="popularBox">
+            <span class="popularBox__textBox">
+                <u class="popularBox__title --boxTitle">Popular Cars</u>
+                <a href="" class="popularBox__link --boxLink">View All</a>
+            </span>
+            <section class="popularBox__carDetail1 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">Koenigsegg</h2>
+                <img src="/Assets/SVGs/carKoenigsegg.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">Sport</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">2 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">90 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$99.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="popularBox__carDetail2 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">Nissan GT-R</h2>
+                <img src="/Assets/SVGs/CARGTR.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">Sport</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">2 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">80 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$80.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="popularBox__carDetail3 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">Rolls-Royce</h2>
+                <img src="/Assets/SVGs/CarRolls-Royce.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">Sedan</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Automatic</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">4 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">70 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$96.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="popularBox__carDetail4 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">Nissan GT-R</h2>
+                <img src="/Assets/SVGs/CARGTR.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">Sport</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">2 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">80 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$80.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+
+        </section>
+        <section class="recommendedBox">
+
+            <span class="recommendedBox__textBox">
+                <u class="recommendedBox__title --boxTitle">Recommended Cars</u>
+                <a href="" class="recommendedBox__link --boxLink">View All</a>
+            </span>
+
+            <section class="recommendedBox__carDetail1 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">All New Rush</h2>
+                <img src="/Assets/SVGs/CarAll New Terios.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">SUV</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">6 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">70 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$72.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="recommendedBox__carDetail2 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">CR-V</h2>
+                <img src="/Assets/SVGs/CarCR  - V.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">SUV</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">6 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">80 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$80.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="recommendedBox__carDetail3 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">All New Terios</h2>
+                <img src="/Assets/SVGs/CarAll New Terios.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">SUV</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">6 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">70 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$74.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="recommendedBox__carDetail4 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">CR-V</h2>
+                <img src="/Assets/SVGs/CarCR-V Black.svg" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">SUV</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">6 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">80 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$81.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="recommendedBox__carDetail5 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">MG ZX Exclusive</h2>
+                <img src="/Assets/SVGs/carMG ZX.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">Hatchback</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Automatic</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">5 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">50 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$76.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="recommendedBox__carDetail6 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">New MG ZS</h2>
+                <img src="/Assets/SVGs/CARMG ZS.svg" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">SUV</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">6 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">70 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$74.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="recommendedBox__carDetail7 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">MG ZX Excite</h2>
+                <img src="/Assets/SVGs/carMG ZX.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">Hatchback</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">4 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">60 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$77.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+            <section class="recommendedBox__carDetail8 --scrollMenu">
+                <h2 class="scrollMenu__title mainTopic--title">New MG ZS</h2>
+                <img src="/Assets/SVGs/CARMG ZS.svg" car" class=" mainTopic--carImage">
+                <i class="fa-solid fa-heart scrollMenu__img--heart"></i>
+                <p class="scrollMenu__carCategory">SUV</p>
+                <div class="scrollMenu__carSpecies">
+                    <div class="gearbox">
+                        <img src="/Assets/SVGs/Cargearbox.svg" class="title1 carSpecies--title">
+                        <u class="info1 carSpecies--info">Manual</u>
+                    </div>
+                    <div class="capacity">
+                        <img src="/Assets/SVGs/profile-2user.svg" class="title2 carSpecies--title">
+                        <u class="info2 carSpecies--info">5 Person</u>
+                    </div>
+                    <div class="gasTank">
+                        <img src="/Assets/SVGs/gas-station.svg" class="title3 carSpecies--title">
+                        <u class="info3 carSpecies--info">70 L</u>
+                    </div>
+                </div>
+                <div class="scrollMenu__priceBox priceBox--price">
+                    <u class="scrollMenu__price">$81.00/<i>day</i></u>
+                    <!-- <u class="scrollMenu__offPrice">$100.00</u> -->
+                </div>
+                <input class="scrollMenu__submit mainTopic--submit" type="submit" value="Rent Now">
+            </section>
+        </section>
+        <section class="menuExpand">
+            <u>120 Cars</u>
+            <button class="menuExpand__button mainTopic--submit">Show More Cars</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <h1 class="footer__title site--title">MORENT</h1>
+        <p class="footer__description mainTopic--description">
+            Our vision is to provide convenience and help increase
+            your sales business.
+        </p>
+        <ul class="about__list footer--list">About
+            <li class="list--item"><a href="" class="item--link">How it works</a></li>
+            <li class="list--item"><a href="" class="item--link">Featured</a></li>
+            <li class="list--item"><a href="" class="item--link">Partnership</a></li>
+            <li class="list--item"><a href="" class="item--link">Business Relation</a></li>
+        </ul>
+        <ul class="social__list footer--list">Social
+            <li class="list--item"><a href="" class="item--link">Discord</a></li>
+            <li class="list--item"><a href="" class="item--link">Instagram</a></li>
+            <li class="list--item"><a href="" class="item--link">X</a></li>
+            <li class="list--item"><a href="" class="item--link">Facebook</a></li>
+
+        </ul>
+        <ul class="community__list footer--list">Community
+            <li class="list--item"><a href="" class="item--link">Events</a></li>
+            <li class="list--item"><a href="" class="item--link">Blog</a></li>
+            <li class="list--item"><a href="" class="item--link">Podcast</a></li>
+            <li class="list--item"><a href="" class="item--link">Invite a friend</a></li>
+        </ul>
+        <div class="footer__info">
+            <a href="" class="footer__info1 footer--link">Privacy & Policy</a>
+            <a href="" class="footer__info2 footer--link">Terms & Conditions</a>
+            <u href="" class="footer__info3 footer--link"><i class="bi bi-c-circle"></i>2022MORENT.Allrights
+                reserved</u>
+
+        </div>
+    </footer>
+</body>
+
+</html>

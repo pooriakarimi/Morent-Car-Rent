@@ -1,7 +1,7 @@
 # Morent-Car-Rent
 Morent is a car renting website which contains home, admin portal, Payment method, car category and car detail sections
 
-Home Page :
+Home Page : https://morent-carrent.netlify.app/
 
 Admin Portal : https://morent-carrent-admin.netlify.app/
 
